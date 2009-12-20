@@ -184,8 +184,11 @@ h3. Ubuntu
 <pre>
 # in openaustralia/twfy/conf
 cp general-example.ubuntu general
-cp httpd.conf.ubuntu /etc/apache2/sites-available/
+sudo cp httpd.conf.ubuntu /etc/apache2/sites-available/openaustralia.conf
+sudo cp -s /etc/apache2/sites-available/openaustralia.conf /etc/apache2/sites-enabled/openaustralia.conf
 </pre>
+
+(You may need to change <code><VirtualHost *></code> to <code><VirtualHost *:80></code> in <code>/etc/apache2/sites-available/openaustralia.conf</code>.)
 
 </div>
 
